@@ -38,7 +38,7 @@ $desktop-width: 992px;
 }
 
 @mixin desktop {
-    @media (min-width: #{$desktop-width}) {
+    @media (max-width: #{$desktop-width}) {
         @content;
     }
 }
@@ -133,17 +133,18 @@ $desktop-width: 992px;
     .background-bottom {
         background-image: url(/img/Violet_top_left_wave.png);
         @include styleBackgroundImg(center, no-repeat, cover, 100%, 360px);
+
+        @include desktop() {
+            top: 557px;
+        }
         @include tablet() {
-            top: 494px;
+            top: 536px;
         }
         @include mobile {
-            top: 407px;
-        }
-        @include desktop() {
-            top: 310px;
+            top: 447px;
         }
         position: absolute;
-        top: 360px;
+        top: 319px;
         left: 0;
         z-index: -1;
         display: block;
