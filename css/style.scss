@@ -132,7 +132,7 @@ $desktop-width: 992px;
     }
     .background-bottom {
         background-image: url(/img/Violet_top_left_wave.png);
-        @include styleBackgroundImg(center, no-repeat, cover, 100%, 400px);
+        @include styleBackgroundImg(center, no-repeat, cover, 100%, 360px);
         @include tablet() {
             top: 494px;
         }
@@ -140,10 +140,10 @@ $desktop-width: 992px;
             top: 407px;
         }
         @include desktop() {
-            top: 518px;  
+            top: 310px;
         }
         position: absolute;
-        top: 340px;
+        top: 360px;
         left: 0;
         z-index: -1;
         display: block;
@@ -181,6 +181,43 @@ $desktop-width: 992px;
             margin: 0;
         }
     }
+
+    .btContactName {
+        position: relative;
+        .logo {
+            i {
+                position: absolute;
+                top: 11px;
+                left: 16px;
+                color: $color-text;
+            }
+        }
+    }
+    .btContactEmail {
+        @extend .btContactName;
+    }
+    .country {
+        position: relative;
+        .logo {
+            i {
+                position: absolute;
+                top: 11px;
+                left: 29px;
+                color: $color-text;
+            }
+        }
+    }
+    .inp {
+        position: relative;
+        .logo {
+            i {
+                position: absolute;
+                top: 46px;
+                left: 24px;
+                color: $color-text;
+            }
+        }
+    }
     background-color: rgba(255, 255, 255, 0.236);
     position: relative;
     z-index: 3;
@@ -206,6 +243,20 @@ $desktop-width: 992px;
     }
     .col-left {
         background-color: $color-white;
+    }
+
+    input {
+        padding-left: 40px !important;
+    }
+    .country {
+        .form-control {
+            padding-left: 40px !important;
+        }
+    }
+    .inp {
+        .form-control {
+            padding-left: 40px !important;
+        }
     }
 }
 
